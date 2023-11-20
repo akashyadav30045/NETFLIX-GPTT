@@ -30,23 +30,6 @@ const Login = () => {
       // Sign Up logic
       createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
       .then((userCredential) => {
-        // Signed up 
-        // const user = userCredential.user;
-        // // updating the name of the user 
-        // updateProfile(user, {
-        //   displayName: name.current.value, 
-        //   photoURL: "https://example.com/jane-q-user/profile.jpg"
-        // }).then(() => {
-        //   // Profile updated!
-        //   // ...
-        //   navigate("/browse");
-        // }).catch((error) => {
-        //   // An error occurred
-        //   seterrorMessage(error.Message)
-        //   // ...
-        // });
-        
-        // ...
         
       })
       .catch((error) => {
@@ -54,7 +37,7 @@ const Login = () => {
         const errorMessage = error.message;
         seterrorMessage(errorCode+ "-" + errorMessage)
         
-        // ..
+        // ..c
   });
 
       

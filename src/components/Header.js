@@ -28,7 +28,7 @@ const Header = () => {
 
   useEffect(()=> {
 
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe =  onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         
@@ -45,7 +45,10 @@ const Header = () => {
 
       }
     });
-  },[])
+    // unsubscribe when componet unmounts 
+    	return () => unsubscribe();
+
+  },[]);
   return (
     <div className=" absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between overflow-hidden">
       <img 
