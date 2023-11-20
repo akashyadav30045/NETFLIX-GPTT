@@ -5,6 +5,7 @@ import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } fr
 import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
+import { Background_IMage } from '../utils/constants';
 
 const Login = () => {
 
@@ -69,8 +70,7 @@ const Login = () => {
       <Header/>
       <div className=" absolute " >
         <img 
-        src="
-        https://assets.nflxext.com/ffe/siteui/vlv3/a09bb938-2d90-42ae-986e-5a3e4abf9e77/8eb1e781-3494-4aa4-9405-268ca6473e4c/IN-en-20231113-popsignuptwoweeks-perspective_alpha_website_large.jpg" 
+        src={Background_IMage}
         alt="background-image" />
       </div>
       <form 
