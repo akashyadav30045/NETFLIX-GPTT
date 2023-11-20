@@ -47,7 +47,7 @@ const Login = () => {
         // });
         
         // ...
-        navigate("/browse")
+        
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -65,7 +65,7 @@ const Login = () => {
         // Signed in 
         const user = userCredential.user;
         // ...
-        navigate("/browse");
+
 
       })
       .catch((error) => {
