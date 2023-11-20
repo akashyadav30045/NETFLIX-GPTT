@@ -1,10 +1,14 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState   } from 'react'
 import Header from './Header'
 import { checkValidData } from '../utils/Validate';
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
+import { useNavigate } from 'react-router-dom';
+import { updateProfile } from 'firebase/auth';
 
 const Login = () => {
+
+  const navigate = useNavigate()  
 
   const[isSignInForm, setisSignInForm] = useState(true);
   const[errorMessage,seterrorMessage]  =useState(null);
@@ -25,33 +29,50 @@ const Login = () => {
     if (!isSignInForm) {
       // Sign Up logic
       createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
-  .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    console.log(user);
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    seterrorMessage(errorCode+ "-" + errorMessage)
-    // ..
+      .then((userCredential) => {
+        // Signed up 
+        // const user = userCredential.user;
+        // // updating the name of the user 
+        // updateProfile(user, {
+        //   displayName: name.current.value, 
+        //   photoURL: "https://example.com/jane-q-user/profile.jpg"
+        // }).then(() => {
+        //   // Profile updated!
+        //   // ...
+        //   navigate("/browse");
+        // }).catch((error) => {
+        //   // An error occurred
+        //   seterrorMessage(error.Message)
+        //   // ...
+        // });
+        
+        // ...
+        navigate("/browse")
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        seterrorMessage(errorCode+ "-" + errorMessage)
+        
+        // ..
   });
 
       
     }
     else{
       signInWithEmailAndPassword(auth, email.current.value, password.current.value)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    seterrorMessage(errorCode+ "-" + errorMessage)
-  });
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // ...
+        navigate("/browse");
+
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        seterrorMessage(errorCode+ "-" + errorMessage)
+      });
   
     }
 
