@@ -10,6 +10,7 @@ import {addUser, removeUser} from "../utils/userSlice"
 
 import { onAuthStateChanged } from 'firebase/auth';
 import { LOGO } from '../utils/constants';
+import VideoTitle from './VideoTitle';
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -63,6 +64,7 @@ const Header = () => {
         (Sign Out)
       </button>
     </div>)}
+    
     </div>
    
     

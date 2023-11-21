@@ -15,14 +15,7 @@ const Browse = () => {
       <Header/>
       <MainContainer/>
       <SecondaryContainer/>
-      {/* 
-        MainCOntainer
-          - Video Background
-          - Video Title
-        SecondaryContainer
-          - Movie List * N
-          - cards*n 
-       */}
+     
     </div>
   )
 }
