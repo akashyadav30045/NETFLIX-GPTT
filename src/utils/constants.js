@@ -1,7 +1,5 @@
     export const LOGO = 
-      " https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940 "
-
-
+    "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
 // export const USER_AVATAR =
 
 export const Background_IMage = 
@@ -14,3 +12,5 @@ export const API_Options = {
             Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZDg4MzA4ZjBhMjdkYTBhZjBlZjkxMWRkM2MzNTg0MiIsInN1YiI6IjY1NDhjNDlhNDFhNTYxMzM2Yjc4YzZhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.q2zmf6BbdBoczsoguKJ4iWdtcJU8yRDlttHy_jBT3I4'
           }
         };
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/" ; 
