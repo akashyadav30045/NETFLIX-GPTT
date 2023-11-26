@@ -3,10 +3,11 @@ import Login from './Login'
 import Browse from './Browse'
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
-import Header from './Header'
+
 
 import {onAuthStateChanged } from "firebase/auth";
 import { auth } from '../utils/firebase'
+import Footer from './Footer'
 
 const Body = () => {
   // dispatch is used to disptch an action . 
